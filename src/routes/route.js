@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const memeController= require("../controllers/memeController")
+const weatherController= require("../controllers/weatherController")
+
 
 
 
@@ -9,9 +10,9 @@ router.get("/test-me", function (req, res) {
 })
 
 
+router.get("/london", weatherController.weatherofLondon)
+router.get("/allcity", weatherController.weatherofallcity)
 
-router.get("/meme", memeController.meme)
-router.post("/Mymeme", memeController.Mymeme)
 
 
 
